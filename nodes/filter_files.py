@@ -1,3 +1,5 @@
+# Copyright 2021 Fabrica Software, LLC
+
 import fnmatch
 import re
 import os

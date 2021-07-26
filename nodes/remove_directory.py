@@ -1,3 +1,5 @@
+# Copyright 2021 Fabrica Software, LLC
+
 import os
 import shutil
 
