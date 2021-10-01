@@ -47,13 +47,13 @@ class CreateDirectory(iograft.Node):
         # Attempt to convert the mode to an integer (parsing as octal).
         mode = int(mode_str, 8)
 
-        if create_sub_dirs:
-            os.makedirs(directory, mode, exist_ok=not fail_if_exists)
+        # Check if the directory already exists.
+        if os.path.exists(directory):
+            if fail_if_exists:
+                raise EnvironmentError("Directory already exists.")
         else:
-            # Check if the directory already exists.
-            if os.path.exists(directory):
-                if fail_if_exists:
-                    raise EnvironmentError("Directory already exists.")
+            if create_sub_dirs:
+                os.makedirs(directory, mode)
             else:
                 os.mkdir(directory, mode)
 
