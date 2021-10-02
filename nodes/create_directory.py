@@ -50,7 +50,8 @@ class CreateDirectory(iograft.Node):
         # Check if the directory already exists.
         if os.path.exists(directory):
             if fail_if_exists:
-                raise EnvironmentError("Directory already exists.")
+                raise EnvironmentError(
+                            "Directory already exists: {}".format(directory))
         else:
             if create_sub_dirs:
                 os.makedirs(directory, mode)
