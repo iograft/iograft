@@ -42,6 +42,9 @@ class ListDirectory(iograft.Node):
         if full_paths:
             paths = [os.path.join(directory, path) for path in paths]
 
+        # Sort the paths.
+        paths = sorted(paths)
+
         # Set the output data to be sent back to iograft.
         iograft.SetOutput(self.paths, data, paths)
 
