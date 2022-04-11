@@ -11,7 +11,7 @@ class GetCurrentDirectory(iograft.Node):
     Get the current working directory. Wrapper around the os.getcwd()
     function.
     """
-    directory = iograft.OutputDefinition("directory", iobasictypes.String())
+    directory = iograft.OutputDefinition("directory", iobasictypes.Path())
 
     @classmethod
     def GetDefinition(cls):

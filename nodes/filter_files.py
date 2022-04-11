@@ -14,7 +14,7 @@ class FilterFiles(iograft.Node):
     matching with fnmatch. Return the list of files that match the query
     string.
     """
-    files = iograft.InputDefinition("files", iobasictypes.StringList())
+    files = iograft.InputDefinition("files", iobasictypes.PathList())
     regex = iograft.InputDefinition("regex", iobasictypes.String())
 
     # If shell style is set to true, use fnmatch to filter the files.
@@ -25,7 +25,7 @@ class FilterFiles(iograft.Node):
     basename_only = iograft.InputDefinition("basename_only",
                                             iobasictypes.Bool(),
                                             default_value=True)
-    out_files = iograft.OutputDefinition("files", iobasictypes.StringList())
+    out_files = iograft.OutputDefinition("files", iobasictypes.PathList())
 
     @classmethod
     def GetDefinition(cls):

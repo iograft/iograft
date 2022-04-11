@@ -11,7 +11,7 @@ class CreateDirectory(iograft.Node):
     Create the directory at the path specified.
     """
 
-    directory = iograft.InputDefinition("directory", iobasictypes.String())
+    directory = iograft.InputDefinition("directory", iobasictypes.Path())
     create_sub_dirs = iograft.InputDefinition("create_sub_dirs",
                                               iobasictypes.Bool(),
                                               default_value=False)
@@ -22,7 +22,7 @@ class CreateDirectory(iograft.Node):
                                    default_value="755")
 
     directory_out = iograft.OutputDefinition("directory",
-                                             iobasictypes.String())
+                                             iobasictypes.Path())
 
     @classmethod
     def GetDefinition(cls):
