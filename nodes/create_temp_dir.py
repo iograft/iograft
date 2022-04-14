@@ -11,12 +11,12 @@ class CreateTempDirectory(iograft.Node):
     Create a temporary directory by default in the operating systems
     standard temp area.
     """
-    base_dir = iograft.InputDefinition("base_dir", iobasictypes.String(),
+    base_dir = iograft.InputDefinition("base_dir", iobasictypes.Path(),
                                        default_value="")
     suffix = iograft.InputDefinition("suffix", iobasictypes.String(),
                                      default_value="")
     directory_out = iograft.OutputDefinition("directory",
-                                             iobasictypes.String())
+                                             iobasictypes.Path())
 
     @classmethod
     def GetDefinition(cls):

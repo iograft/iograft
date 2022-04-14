@@ -11,7 +11,7 @@ class RemoveDirectory(iograft.Node):
     """
     Remove the given directory.
     """
-    directory = iograft.InputDefinition("directory", iobasictypes.String())
+    directory = iograft.InputDefinition("directory", iobasictypes.Path())
     remove_contents = iograft.InputDefinition("remove_contents",
                                               iobasictypes.Bool(),
                                               default_value=False)

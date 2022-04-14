@@ -11,14 +11,14 @@ class CopyFiles(iograft.Node):
     """
     Copy a given list of files to the target directory.
     """
-    files = iograft.InputDefinition("files", iobasictypes.StringList())
+    files = iograft.InputDefinition("files", iobasictypes.PathList())
     target_directory = iograft.InputDefinition("target_directory",
-                                               iobasictypes.String())
+                                               iobasictypes.Path())
     preserve_metadata = iograft.InputDefinition("preserve_metadata",
                                                 iobasictypes.Bool(),
                                                 default_value=True)
 
-    out_files = iograft.OutputDefinition("files", iobasictypes.StringList())
+    out_files = iograft.OutputDefinition("files", iobasictypes.PathList())
 
     @classmethod
     def GetDefinition(cls):

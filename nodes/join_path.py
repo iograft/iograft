@@ -10,9 +10,9 @@ class JoinPath(iograft.Node):
     """
     Join two paths. Wrapper around os.path.join() for two paths.
     """
-    dirname = iograft.InputDefinition("dirname", iobasictypes.String())
+    dirname = iograft.InputDefinition("dirname", iobasictypes.Path())
     basename = iograft.InputDefinition("basename", iobasictypes.String())
-    path = iograft.OutputDefinition("path", iobasictypes.String())
+    path = iograft.OutputDefinition("path", iobasictypes.Path())
 
     @classmethod
     def GetDefinition(cls):

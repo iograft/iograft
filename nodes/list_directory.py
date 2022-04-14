@@ -11,12 +11,12 @@ class ListDirectory(iograft.Node):
     Wrapper around the python os.listdir() function to list the
     contents of a directory.
     """
-    directory = iograft.InputDefinition("directory", iobasictypes.String())
+    directory = iograft.InputDefinition("directory", iobasictypes.Path())
     full_paths = iograft.InputDefinition("full_paths",
                                          iobasictypes.Bool(),
                                          default_value=False)
 
-    paths = iograft.OutputDefinition("files", iobasictypes.StringList())
+    paths = iograft.OutputDefinition("files", iobasictypes.PathList())
 
     @classmethod
     def GetDefinition(cls):
