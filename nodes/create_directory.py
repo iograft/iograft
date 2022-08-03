@@ -1,4 +1,4 @@
-# Copyright 2021 Fabrica Software, LLC
+# Copyright 2022 Fabrica Software, LLC
 
 import os
 
@@ -27,6 +27,7 @@ class CreateDirectory(iograft.Node):
     @classmethod
     def GetDefinition(cls):
         node = iograft.NodeDefinition("create_directory")
+        node.SetMenuPath("General/File System")
         node.AddInput(cls.directory)
         node.AddInput(cls.create_sub_dirs)
         node.AddInput(cls.fail_if_exists)

@@ -1,4 +1,4 @@
-# Copyright 2021 Fabrica Software, LLC
+# Copyright 2022 Fabrica Software, LLC
 
 import os
 
@@ -17,6 +17,7 @@ class GetEnvironmentVariable(iograft.Node):
     @classmethod
     def GetDefinition(cls):
         node = iograft.NodeDefinition("get_environment_var")
+        node.SetMenuPath("General/Environment")
         node.AddInput(GetEnvironmentVariable.var_name)
         node.AddOutput(GetEnvironmentVariable.var_value)
         return node

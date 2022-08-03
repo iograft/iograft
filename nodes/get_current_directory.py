@@ -1,4 +1,4 @@
-# Copyright 2021 Fabrica Software, LLC
+# Copyright 2022 Fabrica Software, LLC
 
 import os
 
@@ -16,6 +16,7 @@ class GetCurrentDirectory(iograft.Node):
     @classmethod
     def GetDefinition(cls):
         node = iograft.NodeDefinition("get_current_directory")
+        node.SetMenuPath("General/File System")
         node.AddOutput(cls.directory)
         return node
 

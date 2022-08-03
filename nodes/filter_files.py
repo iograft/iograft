@@ -1,4 +1,4 @@
-# Copyright 2021 Fabrica Software, LLC
+# Copyright 2022 Fabrica Software, LLC
 
 import fnmatch
 import re
@@ -30,6 +30,7 @@ class FilterFiles(iograft.Node):
     @classmethod
     def GetDefinition(cls):
         node = iograft.NodeDefinition("filter_files")
+        node.SetMenuPath("General/File System")
         node.AddInput(cls.files)
         node.AddInput(cls.regex)
         node.AddInput(cls.shell_style)

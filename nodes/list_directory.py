@@ -1,4 +1,4 @@
-# Copyright 2021 Fabrica Software, LLC
+# Copyright 2022 Fabrica Software, LLC
 
 import os
 
@@ -21,6 +21,7 @@ class ListDirectory(iograft.Node):
     @classmethod
     def GetDefinition(cls):
         node = iograft.NodeDefinition("list_directory")
+        node.SetMenuPath("General/File System")
         node.AddInput(cls.directory)
         node.AddInput(cls.full_paths)
         node.AddOutput(cls.paths)

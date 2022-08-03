@@ -1,4 +1,4 @@
-# Copyright 2021 Fabrica Software, LLC
+# Copyright 2022 Fabrica Software, LLC
 
 import os
 import shutil
@@ -23,6 +23,7 @@ class CopyFiles(iograft.Node):
     @classmethod
     def GetDefinition(cls):
         node = iograft.NodeDefinition("copy_files")
+        node.SetMenuPath("General/File System")
         node.AddInput(cls.files)
         node.AddInput(cls.target_directory)
         node.AddInput(cls.preserve_metadata)

@@ -1,4 +1,4 @@
-# Copyright 2021 Fabrica Software, LLC
+# Copyright 2022 Fabrica Software, LLC
 
 import os
 import shutil
@@ -22,6 +22,7 @@ class RemoveDirectory(iograft.Node):
     @classmethod
     def GetDefinition(cls):
         node = iograft.NodeDefinition("remove_directory")
+        node.SetMenuPath("General/File System")
         node.AddInput(cls.directory)
         node.AddInput(cls.remove_contents)
         node.AddInput(cls.must_exist)

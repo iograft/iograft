@@ -1,4 +1,4 @@
-# Copyright 2021 Fabrica Software, LLC
+# Copyright 2022 Fabrica Software, LLC
 
 import tempfile
 
@@ -21,6 +21,7 @@ class CreateTempDirectory(iograft.Node):
     @classmethod
     def GetDefinition(cls):
         node = iograft.NodeDefinition("create_temp_directory")
+        node.SetMenuPath("General/File System")
         node.AddInput(cls.base_dir)
         node.AddInput(cls.suffix)
         node.AddOutput(cls.directory_out)
