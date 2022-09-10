@@ -9,7 +9,7 @@ class Sleep(iograft.Node):
     """
     Sleep for a given number of seconds.
     """
-    seconds = iograft.InputDefinition("time", iobasictypes.Int())
+    seconds = iograft.InputDefinition("time", iobasictypes.UnsignedInt())
 
     @classmethod
     def GetDefinition(cls):
