@@ -12,7 +12,10 @@ These snippets provide a quick way to create nodes by automatically filling in t
 
 See the [Visual Studio Snippets Docs](https://code.visualstudio.com/docs/editor/userdefinedsnippets#_create-your-own-snippets) for instructions on adding snippets. One possible method is via Preferences > Configure User Snippets, then choose "New Global Snippets file", name the file (i.e. `iograft_node.json.code-snippets`) and paste in the contents from this repository. You can also put the snippets file included in this repository directly in your VSCode snippets directory.
 
-Three snippets are included and can be triggered within Python scopes (via `Ctrl+Space`):
-- `iognode` - Create a skeleton iograft Python node.
+Three snippets are included in the `iograft_node` snippets file and can be triggered within Python scopes (via `Ctrl+Space`):
+- `iognode` - Create a skeleton iograft Python node plugin.
 - `ioginput` - Create an iograft Python node input.
 - `iogoutput` - Create an iograft Python node output.
+
+One snippet is included in the `iograft_type` snippets file and can be triggered within Python scopes as well:
+- `iogtype` - Create a skeleton iograft Python type plugin.
