@@ -25,5 +25,5 @@ One snippet is included in the `iograft_type` snippets file and can be triggered
 Some of the included nodes in this repository require additional Python packages. All of these packages are bundled with the iograft installer and will work out of the box when running iograft's built-in interpreter (Python3.9). 
 
 In custom environments, these packages will need to be added manually in order to use the nodes that depend on them. The required packages can be installed via pip:
-- commentjson (https://github.com/vaidik/commentjson) {load_json_string.py, load_json_file.py}
-- lark-parser (https://github.com/lark-parser/lark) {load_json_string.py, load_json_file.py}
+- commentjson (https://github.com/vaidik/commentjson) (Nodes: load_json_string.py, load_json_file.py)
+- lark-parser (https://github.com/lark-parser/lark) (Nodes: load_json_string.py, load_json_file.py)
