@@ -7,8 +7,18 @@ import iopythontypes
 
 class FormatString(iograft.Node):
     """
-    Given a 'template_string' and an object to use to fill that template
+    Given a 'template_string' and data to use to fill that template
     string, call Python's format operator to generate a formatted string.
+
+    Data to fill the template can be provided in two inputs: 'positional_args'
+    and 'named_args'.
+
+    Example format inputs and outputs:
+        template_string - {frame:04d}.{}_{}.txt
+        positional_args - ['whale', 'chrome']
+        named_args - {'frame': 100}
+
+        formatted_string - 0100.whale_chrome.txt
 
     The object used to fill the template string is a AnyList since the
     format string takes a variety of possible input types.
@@ -18,13 +28,13 @@ class FormatString(iograft.Node):
     template_string = iograft.InputDefinition("template_string",
                                               iobasictypes.String())
 
-    # Positional arguments to the format function.
+    # Positional arguments to the format function. These fill any empty braces
+    # or numbered braces in the template string (i.e. {} or {2}).
     positional_args = iograft.InputDefinition("positional_args",
                                               iopythontypes.AnyList(),
                                               default_value=[])
 
-    # Named arguments to the format function. These fill any empty braces
-    # or numbered braces in the template string (i.e. {} or {2}).
+    # Named arguments to the format function.
     named_args = iograft.InputDefinition("named_args", iopythontypes.Dict(),
                                          default_value={})
 
