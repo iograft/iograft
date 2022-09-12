@@ -27,3 +27,4 @@ Some of the included nodes in this repository require additional Python packages
 In custom environments, these packages will need to be added manually in order to use the nodes that depend on them. The required packages can be installed via pip:
 - commentjson (https://github.com/vaidik/commentjson) (Nodes: load_json_string.py, load_json_file.py)
 - lark-parser (https://github.com/lark-parser/lark) (Nodes: load_json_string.py, load_json_file.py)
+- parse (https://github.com/r1chardj0n3s/parse) (Nodes: parse_string.py)
