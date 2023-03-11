@@ -1,3 +1,3 @@
 @echo off
 
-python.exe %~dp0\iograftpy_subcore %*
+python.exe "%~dp0\iograftpy_subcore" %*
